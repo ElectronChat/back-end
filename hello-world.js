@@ -8,7 +8,7 @@ const port = 80;
 app.use(bodyParser.urlencoded({extended: false}));
 app.use('/home',route);
 app.use((req, res,next)=>{
-   res.sendFile('../front-end/electron-chat/dist/electron-chat/index.html');
+   res.sendFile('../front-end/electron-chat/dist/electron-chat/index.html', {root: __dirname});
 });
 const server = http.createServer(app);
 
