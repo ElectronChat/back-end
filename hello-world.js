@@ -5,7 +5,7 @@ const route = require('./routes');
 const app = express();
 const hostname = '69.48.142.114';
 const port = 80;
-app.get('/', (req, res) => { res.sendFile('/home/front-end/electron-chat/dist'); });
+app.get('/', (req, res) => { res.sendFile('/home/front-end/electron-chat/dist/index.html'); });
 const server = http.createServer(app);
 
 server.listen(port, hostname, () => {
