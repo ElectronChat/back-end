@@ -8,7 +8,7 @@ const port = 80;
 app.use(bodyParser.urlencoded({extended: false}));
 app.use('/home',route);
 app.use((req, res,next)=>{
-   res.status(404).send('<h1> Fallback works </h1>');
+   res.sendFile('../front-end/electron-chat/dist/electron-chat/index.html');
 });
 const server = http.createServer(app);
 
