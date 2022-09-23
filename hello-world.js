@@ -1,3 +1,7 @@
+// Local hostname and port
+//const hostname = 'localhost';
+//const port = 3000;
+// On server
 const hostname = '69.48.142.114';
 const port = 80;
 /*
@@ -20,4 +24,5 @@ app
     .listen(port, hostname, function () {
         console.log('Port: ' + port);
         console.log('Html: ' + html);
+        console.log(`Server running at http://${hostname}:${port}/`)
     });
