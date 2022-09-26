@@ -2,7 +2,7 @@ const express = require( 'express' );
 const http = require('http');
 const app = express()
 var distDir = __dirname + "/front/";
-app.use('/', express.static(distDir));
+app.use('/', express.static('/home/back-end/front/index.html'));
 // app.get('/', (req,res)=>
 // {
 //     res.sendFile('/home/front-end/frontend/dist/frontend/index.html');
