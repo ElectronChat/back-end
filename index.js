@@ -1,6 +1,6 @@
-const express = require( 'express' );
-const http = require('http');
-const app = express()
+let express = require( 'express' );
+let http = require('http');
+let app = express()
 var distDir = __dirname + "/front/";
 app.use(express.static('/home/back-end/front'));
 
