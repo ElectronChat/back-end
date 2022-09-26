@@ -3,11 +3,11 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const route = require('./routes');
 const app = express();
-const hostname = '69.48.142.114';
-const port = 80;
-app.get('/', (req, res) => { res.sendFile('/home/front-end/frontend/dist/frontend/index.html'); });
+app.get('/yes', (req, res) => { res.sendFile('/home/front-end/frontend/dist/frontend/index.html'); });
 const server = http.createServer(app);
 
+const hostname = '69.48.142.114';
+const port = 80;
 server.listen(port, hostname, () => {
   console.log(`Server running at http://${hostname}:${port}/`);
 });

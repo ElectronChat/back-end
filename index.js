@@ -6,4 +6,8 @@ app.get('/', (req,res)=>
     res.sendFile('/home/front-end/frontend/dist/frontend/index.html');
 });
 
-app.listen(3000,() => console.log('listening on port 3000'));
+const hostname = '69.48.142.114';
+const port = 80;
+app.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
