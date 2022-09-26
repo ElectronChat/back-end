@@ -1,10 +1,12 @@
 const express = require( 'express' );
 const http = require('http');
 const app = express()
-app.get('/', (req,res)=>
-{
-    res.sendFile('/home/front-end/frontend/dist/frontend/index.html');
-});
+var distDir = __dirname + "/front/";
+app.use(express.static(distDir));
+// app.get('/', (req,res)=>
+// {
+//     res.sendFile('/home/front-end/frontend/dist/frontend/index.html');
+// });
 
 const hostname = '69.48.142.114';
 const port = 80;
