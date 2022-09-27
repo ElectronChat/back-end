@@ -1,7 +1,18 @@
-const path = require('path');
-const express = require('express');
-const router = express.Router();
-router.get('/home', (req, res,next)=>{
-  res.sendFile('../front-end/electron-chat/dist/electron-chat/index.html');
+let express = require( 'express' );
+let http = require('http');
+let app1 = express();  // Compliant
+app1.disable("x-powered-by");
+let app = express()
+var distDir = __dirname + "/front/";
+app.use(express.static('/home/back-end/front'));
+
+app.get('/', (req,res)=>
+{
+     res.sendFile('/home/back-end/front/index.html');
 });
-module.exports = router;
+
+const hostname = '69.48.142.114';
+const port = 80;
+app.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});
