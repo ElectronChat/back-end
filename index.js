@@ -9,7 +9,7 @@ let app1 = express();  // Compliant
 app1.disable("x-powered-by");
 
 // we create our app and give it some middleware
-let app = express()
+let app = express();
 
 // this is our directory where all of our frontend gets built to. 
 var distDir = __dirname + "/front/";
@@ -17,12 +17,7 @@ app.use(express.static('/home/back-end/front'));
 
 // here is our routing pipeline, we reference each of our routing modules that we need right here.
 // the first route is how we will start creating our routes.
-app.use('/home', home)
-// this is the basic way that should not be done 
-app.get('/', (req,res)=>
-{
-     res.sendFile('/home/front-end/frontend/dist/frontend/index.html');
-});
+app.use('/', home);
 
 const hostname = '69.48.142.114';
 const port = 80;
