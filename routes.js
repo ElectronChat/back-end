@@ -1,10 +1,14 @@
 let express = require( 'express' );
 let http = require('http');
+const main = require('./app/routes/main')
+
 let app1 = express();  // Compliant
 app1.disable("x-powered-by");
 let app = express()
 var distDir = __dirname + "/front/";
 app.use(express.static('/home/back-end/front'));
+
+app.use('/home',main)
 
 app.get('/', (req,res)=>
 {
