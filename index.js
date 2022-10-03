@@ -8,11 +8,6 @@ const home = require( './app/routes/main');
 let app1 = express();  // Compliant
 app1.disable("x-powered-by");
 
-// middleware function 
-app.get('/', function (req, res, next) {
-  next();
-})
-
 // this is our directory where all of our frontend gets built to. 
 var distDir = __dirname + "/front/";
 app.use('/home/back-end/front');
